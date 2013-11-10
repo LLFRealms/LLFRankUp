@@ -1,0 +1,12 @@
+name: LLFRankUp
+author: L337Lobster
+main: com.llfrealms.LLFRankUp.LLFRankUp
+depend: [CreateYourOwnMenus]
+version: 1.0
+
+commands:
+    /rankup:
+       description: Open the next rank up menu.
+       aliases: /ru
+       permission-message: You do not have permission for this command
+       usage: /<command>

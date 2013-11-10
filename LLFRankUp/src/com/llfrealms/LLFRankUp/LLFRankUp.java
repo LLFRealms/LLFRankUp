@@ -11,12 +11,14 @@ import net.milkbowl.vault.permission.Permission;
 
 public final class LLFRankUp extends JavaPlugin
 {
+	public String pluginName = "LLFRankUp";
 	public ConsoleCommandSender consoleMessage = Bukkit.getConsoleSender();
 	public static Permission perms = null;
 	
 	@Override
     public void onEnable(){
 		setupPermissions();
+		sendMessage(consoleMessage, "[" + pluginName + "] &aLLFRankUp is active!");
     }
  
     @Override

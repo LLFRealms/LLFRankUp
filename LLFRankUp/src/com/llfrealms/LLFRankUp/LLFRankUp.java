@@ -253,6 +253,46 @@ public final class LLFRankUp extends JavaPlugin
     			{
     				Bukkit.getServer().dispatchCommand(sender, "menu open recruit-d");
     			}
+    			else if(perms.has(player, "moderator.e"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-d");
+    			}
+    			else if(perms.has(player, "moderator.d"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-c");
+    			}
+    			else if(perms.has(player, "moderator.c"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-b");
+    			}
+    			else if(perms.has(player, "moderator.b"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-a");
+    			}
+    			else if(perms.has(player, "moderator.a"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-s");
+    			}
+    			else if(perms.has(player, "admin.e"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open admin-d");
+    			}
+    			else if(perms.has(player, "admin.d"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open admin-c");
+    			}
+    			else if(perms.has(player, "admin.c"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open admin-b");
+    			}
+    			else if(perms.has(player, "admin.b"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open admin-a");
+    			}
+    			else if(perms.has(player, "admin.a"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open admin-s");
+    			}
     			else
     			{
     				Bukkit.getServer().dispatchCommand(sender, "menu open ranks");

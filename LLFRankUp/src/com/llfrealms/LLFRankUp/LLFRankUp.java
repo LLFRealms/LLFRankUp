@@ -101,7 +101,7 @@ public final class LLFRankUp extends JavaPlugin
     }
     public void yesOP(Player player)
     {
-    	sendMessage(player, "&f[&2LLFRankUp&f] &4This plugin currently does not support OP players. Sorry for the inconvience.");
+    	sendMessage(player, "&d[&2LLFRankUp&d] &4This plugin currently does not support OP players. Sorry for the inconvience.");
     }
     public void noOP(Player player)
     {

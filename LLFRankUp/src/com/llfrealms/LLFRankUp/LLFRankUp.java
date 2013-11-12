@@ -85,213 +85,222 @@ public final class LLFRankUp extends JavaPlugin
         	else 
         	{
     			Player player = (Player) sender;
-    			if(perms.has(player, "rank.s0")) 
+    			if(perms.has(player, "rank.s6")) 
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open corporal-s");
-    			}
-    			else if(perms.has(player, "rank.s1"))
-    			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open sergeant-s");
-    			}
-    			else if(perms.has(player, "rank.s2"))
-    			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open lieutenant-s");
-    			}
-    			else if(perms.has(player, "rank.s3"))
-    			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open major-s");
-    			}
-    			else if(perms.has(player, "rank.s4"))
-    			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open colonel-s");
+    				sendMessage(sender, "&9You're already Brigadier-S WHAT MORE DO YOU WANT?!?");
+    				
     			}
     			else if(perms.has(player, "rank.s5"))
     			{
     				Bukkit.getServer().dispatchCommand(sender, "menu open brigadier-s");
     			}
-    			else if(perms.has(player, "rank.s6"))
+    			else if(perms.has(player, "rank.s4"))
     			{
-    				sendMessage(sender, "You're already Brigadier-S WHAT MORE DO YOU WANT?!?");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open colonel-s");
     			}
-    			else if(perms.has(player, "rank.a0")) 
+    			else if(perms.has(player, "rank.s3"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open corporal-a");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open major-s");
     			}
-    			else if(perms.has(player, "rank.a1"))
+    			else if(perms.has(player, "rank.s2"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open sergeant-a");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open lieutenant-s");
     			}
-    			else if(perms.has(player, "rank.a2"))
+    			else if(perms.has(player, "rank.s1"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open lieutenant-a");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open sergeant-s");
     			}
-    			else if(perms.has(player, "rank.a3"))
+    			else if(perms.has(player, "rank.s0"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open major-a");
-    			}
-    			else if(perms.has(player, "rank.a4"))
-    			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open colonel-a");
-    			}
-    			else if(perms.has(player, "rank.a5"))
-    			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open brigadier-a");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open corporal-s");
     			}
     			else if(perms.has(player, "rank.a6"))
     			{
     				Bukkit.getServer().dispatchCommand(sender, "menu open recruit-s");
     			}
-    			else if(perms.has(player, "rank.b0")) 
+    			else if(perms.has(player, "rank.a5"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open corporal-b");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open brigadier-a");
     			}
-    			else if(perms.has(player, "rank.b1"))
+    			else if(perms.has(player, "rank.a4"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open sergeant-b");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open colonel-a");
     			}
-    			else if(perms.has(player, "rank.b2"))
+    			else if(perms.has(player, "rank.a3"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open lieutenant-b");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open major-a");
     			}
-    			else if(perms.has(player, "rank.b3"))
+    			else if(perms.has(player, "rank.a2"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open major-b");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open lieutenant-a");
     			}
-    			else if(perms.has(player, "rank.b4"))
+    			else if(perms.has(player, "rank.a1"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open colonel-b");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open sergeant-a");
     			}
-    			else if(perms.has(player, "rank.b5"))
+    			else if(perms.has(player, "rank.a0"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open brigadier-b");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open corporal-a");
     			}
     			else if(perms.has(player, "rank.b6"))
     			{
     				Bukkit.getServer().dispatchCommand(sender, "menu open recruit-a");
     			}
-    			else if(perms.has(player, "rank.c0")) 
+    			else if(perms.has(player, "rank.b5"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open corporal-c");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open brigadier-b");
     			}
-    			else if(perms.has(player, "rank.c1"))
+    			else if(perms.has(player, "rank.b4"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open sergeant-c");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open colonel-b");
     			}
-    			else if(perms.has(player, "rank.c2"))
+    			else if(perms.has(player, "rank.b3"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open lieutenant-c");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open major-b");
     			}
-    			else if(perms.has(player, "rank.c3"))
+    			else if(perms.has(player, "rank.b2"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open major-c");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open lieutenant-b");
     			}
-    			else if(perms.has(player, "rank.c4"))
+    			else if(perms.has(player, "rank.b1"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open colonel-c");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open sergeant-b");
     			}
-    			else if(perms.has(player, "rank.c5"))
+    			else if(perms.has(player, "rank.b0"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open brigadier-c");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open corporal-b");
     			}
     			else if(perms.has(player, "rank.c6"))
     			{
     				Bukkit.getServer().dispatchCommand(sender, "menu open recruit-b");
     			}
-    			else if(perms.has(player, "rank.d0")) 
+    			else if(perms.has(player, "rank.c5"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open corporal-d");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open brigadier-c");
     			}
-    			else if(perms.has(player, "rank.d1"))
+    			else if(perms.has(player, "rank.c4"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open sergeant-d");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open colonel-c");
     			}
-    			else if(perms.has(player, "rank.d2"))
+    			else if(perms.has(player, "rank.c3"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open lieutenant-d");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open major-c");
     			}
-    			else if(perms.has(player, "rank.d3"))
+    			else if(perms.has(player, "rank.c2"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open major-d");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open lieutenant-c");
     			}
-    			else if(perms.has(player, "rank.d4"))
+    			else if(perms.has(player, "rank.c1"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open colonel-d");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open sergeant-c");
     			}
-    			else if(perms.has(player, "rank.d5"))
+    			else if(perms.has(player, "rank.c0"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open brigadier-d");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open corporal-c");
     			}
     			else if(perms.has(player, "rank.d6"))
     			{
     				Bukkit.getServer().dispatchCommand(sender, "menu open recruit-c");
     			}
-    			else if(perms.has(player, "rank.e0")) 
+    			else if(perms.has(player, "rank.d5"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open corporal-e");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open brigadier-d");
     			}
-    			else if(perms.has(player, "rank.e1"))
+    			else if(perms.has(player, "rank.d4"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open sergeant-e");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open colonel-d");
     			}
-    			else if(perms.has(player, "rank.e2"))
+    			else if(perms.has(player, "rank.d3"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open lieutenant-e");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open major-d");
     			}
-    			else if(perms.has(player, "rank.e3"))
+    			else if(perms.has(player, "rank.d2"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open major-e");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open lieutenant-d");
     			}
-    			else if(perms.has(player, "rank.e4"))
+    			else if(perms.has(player, "rank.d1"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open colonel-e");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open sergeant-d");
     			}
-    			else if(perms.has(player, "rank.e5"))
+    			else if(perms.has(player, "rank.d0"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open brigadier-e");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open corporal-d");
     			}
     			else if(perms.has(player, "rank.e6"))
     			{
     				Bukkit.getServer().dispatchCommand(sender, "menu open recruit-d");
     			}
-    			else if(perms.has(player, "moderator.e"))
+    			else if(perms.has(player, "rank.e5"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-d");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open brigadier-e");
     			}
-    			else if(perms.has(player, "moderator.d"))
+    			else if(perms.has(player, "rank.e4"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-c");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open colonel-e");
     			}
-    			else if(perms.has(player, "moderator.c"))
+    			else if(perms.has(player, "rank.e3"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-b");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open major-e");
     			}
-    			else if(perms.has(player, "moderator.b"))
+    			else if(perms.has(player, "rank.e2"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-a");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open lieutenant-e");
+    			}
+    			else if(perms.has(player, "rank.e1"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open sergeant-e");
+    			}
+    			else if(perms.has(player, "rank.e0"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open corporal-e");
+    			}
+    			else if(perms.has(player, "moderator.s"))
+    			{
+    				sendMessage(sender, "&9You're already S LEVEL WHAT MORE DO YOU WANT?!?");
     			}
     			else if(perms.has(player, "moderator.a"))
     			{
     				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-s");
     			}
-    			else if(perms.has(player, "admin.e"))
+    			else if(perms.has(player, "moderator.b"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open admin-d");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-a");
     			}
-    			else if(perms.has(player, "admin.d"))
+    			else if(perms.has(player, "moderator.c"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open admin-c");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-b");
     			}
-    			else if(perms.has(player, "admin.c"))
+    			else if(perms.has(player, "moderator.d"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open admin-b");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-c");
+    			}
+    			else if(perms.has(player, "moderator.e"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open moderator-d");
+    			}
+    			else if(perms.has(player, "admin.s"))
+    			{
+    				sendMessage(sender, "&9You're already S LEVEL WHAT MORE DO YOU WANT?!?");
+    			}
+    			else if(perms.has(player, "admin.a"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open admin-s");
     			}
     			else if(perms.has(player, "admin.b"))
     			{
     				Bukkit.getServer().dispatchCommand(sender, "menu open admin-a");
     			}
-    			else if(perms.has(player, "admin.a"))
+    			else if(perms.has(player, "admin.c"))
     			{
-    				Bukkit.getServer().dispatchCommand(sender, "menu open admin-s");
+    				Bukkit.getServer().dispatchCommand(sender, "menu open admin-b");
+    			}
+    			else if(perms.has(player, "admin.d"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open admin-c");
+    			}
+    			else if(perms.has(player, "admin.e"))
+    			{
+    				Bukkit.getServer().dispatchCommand(sender, "menu open admin-d");
     			}
     			else
     			{

@@ -14,9 +14,12 @@ public final class LLFRankUp extends JavaPlugin
 	public String pluginName = "LLFRankUp";
 	public ConsoleCommandSender consoleMessage = Bukkit.getConsoleSender();
 	public static Permission perms = null;
+	private int id = 0; //DevBukkit project ID
 	
 	@Override
     public void onEnable(){
+		@SuppressWarnings("unused")
+		Updater updater = new Updater(this, id, this.getFile(), Updater.UpdateType.DEFAULT, false);
 		setupPermissions();
 		sendMessage(consoleMessage, "[" + pluginName + "] &aLLFRankUp is active!");
     }

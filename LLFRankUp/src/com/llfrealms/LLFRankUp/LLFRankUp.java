@@ -1,6 +1,9 @@
 package com.llfrealms.LLFRankUp;
 
 //bukkit imports
+import java.util.ArrayList;
+import java.util.List;
+
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -14,21 +17,54 @@ public final class LLFRankUp extends JavaPlugin
 	public String pluginName = "LLFRankUp";
 	public ConsoleCommandSender consoleMessage = Bukkit.getConsoleSender();
 	public static Permission perms = null;
-	private int id = 0; //DevBukkit project ID
+	public String rankPermBase;
+	public int rankLow = 0, rankHigh = 0; //same as in the config
+	public ArrayList<String> lvls = new ArrayList<String>(); //rankLvls from the config
+	public ArrayList<Integer> base = new ArrayList<Integer>(); //rankBases from the config
+	private int id = 71874; //DevBukkit project ID
 	
 	@Override
     public void onEnable(){
+		this.saveDefaultConfig();
+    	this.getConfig();
+		if(getConfig().getString("autoupdate").equals("yes"))
+		{
 		@SuppressWarnings("unused")
 		Updater updater = new Updater(this, id, this.getFile(), Updater.UpdateType.DEFAULT, false);
+		}
+		setupConfig();
 		setupPermissions();
 		sendMessage(consoleMessage, "[" + pluginName + "] &aLLFRankUp is active!");
     }
  
     @Override
     public void onDisable() {
-        // TODO Insert logic to be performed when the plugin is disabled
+    	if(getConfig().getString("autoupdate").equals("yes"))
+		{
+		@SuppressWarnings("unused")
+		Updater updaterend = new Updater(this, id, this.getFile(), Updater.UpdateType.DEFAULT, false);
+		}
+    }
+    public void setupConfig()
+    {
+    	sendMessage(consoleMessage, "Setting up the config");
+    	rankHigh = getConfig().getInt("rankHigh");
+    	rankLow = getConfig().getInt("rankLow");
+    	rankPermBase = getConfig().getString("rankPermBase");
+    	List<String> level = getConfig().getStringList("rankLevels");
+		for(String s : level)
+		{
+			lvls.add(s);
+			sendMessage(consoleMessage, s);
+		}
+		for(int i = 0; i  <= rankHigh; i++)
+		{
+			base.add(i);
+			sendMessage(consoleMessage, i+"");
+		}
     }
     private boolean setupPermissions() {
+    	sendMessage(consoleMessage, "Setting up the permissions hook");
         RegisteredServiceProvider<Permission> rsp = getServer().getServicesManager().getRegistration(Permission.class);
         perms = rsp.getProvider();
         return perms != null;
@@ -94,7 +130,9 @@ public final class LLFRankUp extends JavaPlugin
     			}
     			else if(player.isOp())
     			{
-    				yesOP(player);
+    				player.sendMessage("Test");
+    				sendMessage(consoleMessage, "Test");
+    				noOP2(player);
     			}
     	        return true;
     		}
@@ -105,6 +143,17 @@ public final class LLFRankUp extends JavaPlugin
     public void yesOP(Player player)
     {
     	sendMessage(player, "&d[&2LLFRankUp&d] &4This plugin currently does not support OP players. Sorry for the inconvience.");
+    }
+    public void noOP2(Player player)
+    {
+    	for(int i = 0; i < lvls.size(); i++)
+    	{
+    		for(int j = 0; j < base.size(); j++)
+    		{
+    			String rank = rankPermBase + "." + lvls.get(i) + base.get(j);
+    			player.sendMessage(rank);
+    		}
+    	}
     }
     public void noOP(Player player)
     {

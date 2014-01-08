@@ -1,0 +1,26 @@
+#Toggle automatic updating
+autoupdate: yes
+
+#For rank permission setup. EX] rank.e0 for the E-Level rank 0, in this sample config that would be E-Lvl Recruit
+rankPermBase: rank
+
+#the lowest rank's number EX] rank.e0
+rankLow: 0
+#The highest rank's number EX] rank.e6
+rankHigh: 6
+
+rankLvls: #list highest to lowest
+        - s
+        - a
+        - b
+        - c
+        - d
+        - e
+ranksBase: #ranks without the levels
+        - recruit
+        - corporal
+        - sergeant
+        - lieutenant
+        - major
+        - colonel
+        - brigadier

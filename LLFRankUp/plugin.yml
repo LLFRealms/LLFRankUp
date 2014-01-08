@@ -1,13 +1,12 @@
 name: LLFRankUp
 author: L337Lobster
-website: http://llfrealms.com
+website: http://dev.bukkit.org/bukkit-plugins/llfrankup/
 main: com.llfrealms.LLFRankUp.LLFRankUp
 depend: [CreateYourOwnMenus]
-version: 2.6
+version: 1.6
 
 commands:
     /rankup:
        description: Open the next rank up menu.
        aliases: /ru
-       permission-message: You do not have permission for this command
        usage: /<command>

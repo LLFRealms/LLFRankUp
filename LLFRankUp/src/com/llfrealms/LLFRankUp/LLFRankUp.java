@@ -27,14 +27,16 @@ public final class LLFRankUp extends JavaPlugin
     public void onEnable(){
 		this.saveDefaultConfig();
     	this.getConfig();
-		if(getConfig().getString("autoupdate").equals("yes"))
+    	getLogger().info("Setting up the config, Psych");
+		/*if(getConfig().getString("autoupdate").equals("yes"))
 		{
 		@SuppressWarnings("unused")
-		Updater updater = new Updater(this, id, this.getFile(), Updater.UpdateType.DEFAULT, false);
-		}
+		Updater updater = new Updater(this, id, this.getFile(), Updater.UpdateType.DEFAULT, true);
+		}*/
 		setupConfig();
 		setupPermissions();
-		sendMessage(consoleMessage, "[" + pluginName + "] &aLLFRankUp is active!");
+		getLogger().info("Setting up the config, Psych");
+		//sendMessage(consoleMessage, "[" + pluginName + "] &aLLFRankUp is active!");
     }
  
     @Override
@@ -47,7 +49,7 @@ public final class LLFRankUp extends JavaPlugin
     }
     public void setupConfig()
     {
-    	sendMessage(consoleMessage, "Setting up the config");
+    	getLogger().info("Setting up the config");
     	rankHigh = getConfig().getInt("rankHigh");
     	rankLow = getConfig().getInt("rankLow");
     	rankPermBase = getConfig().getString("rankPermBase");
@@ -55,16 +57,16 @@ public final class LLFRankUp extends JavaPlugin
 		for(String s : level)
 		{
 			lvls.add(s);
-			sendMessage(consoleMessage, s);
+			getLogger().info(s);
 		}
 		for(int i = 0; i  <= rankHigh; i++)
 		{
 			base.add(i);
-			sendMessage(consoleMessage, i+"");
+			getLogger().info(""+i);
 		}
     }
     private boolean setupPermissions() {
-    	sendMessage(consoleMessage, "Setting up the permissions hook");
+    	getLogger().info("Setting up the config the permissions hook");
         RegisteredServiceProvider<Permission> rsp = getServer().getServicesManager().getRegistration(Permission.class);
         perms = rsp.getProvider();
         return perms != null;
